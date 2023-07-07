@@ -1,13 +1,20 @@
 version: "3.1"
 
 rules:
-
-- rule: Say goodbye anytime the user says goodbye
+- rule: Saudação
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- rule: Say 'I am a bot' anytime the user challenges
+  - intent: greet
+  - action: utter_greet
+- rule: Pedido de reunião
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: request_meeting
+  - action: utter_ask_for_meeting
+- rule: Confirmação de reunião
+  steps:
+  - intent: affirm
+  - action: utter_confirm_meeting
+- rule: Negar agendamento de reunião
+  steps:
+  - intent: deny
+  - action: utter_ask_again
+

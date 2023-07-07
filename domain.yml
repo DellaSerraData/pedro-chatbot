@@ -1,33 +1,29 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+- greet
+- request_meeting
+- affirm
+- deny
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Olá! Como posso ajudar você hoje?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_ask_for_meeting:
+  - text: "Claro! Quando você gostaria de agendar a reunião?"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_confirm_meeting:
+  - text: "Ótimo, a reunião está agendada. Você receberá um email de confirmação em breve."
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_ask_again:
+  - text: "Desculpe, não consegui entender. Você poderia repetir, por favor?"
 
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+actions:
+- utter_greet
+- utter_ask_for_meeting
+- utter_confirm_meeting
+- utter_ask_again
 
 session_config:
   session_expiration_time: 60
